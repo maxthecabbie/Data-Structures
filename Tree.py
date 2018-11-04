@@ -49,7 +49,7 @@ class BST:
     def remove(self, val):
         self.remove_helper(self.root, val)
 
-    def remove_helper(root, val):
+    def remove_helper(self, root, val):
         if root is None:
             return
 
@@ -68,3 +68,5 @@ class BST:
             root.left = self.remove_helper(root.left, val)
         else:
             root.right = self.remove_helper(root.right, val)
+
+        return root
